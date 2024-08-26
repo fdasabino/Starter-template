@@ -1,91 +1,138 @@
+<!-- 
+  * 1.	<header>: Contains introductory content like the site’s title or navigation links.
+	* 2.	<nav>: Contains the navigation menu with links to different sections of the site.
+	* 3.	<main>: Represents the main content of the page, holding all the primary sections.
+	* 4.	<section>: Defines thematic grouping of content, each with a heading, such as “About Us,” “Our Services,” and “Gallery.”
+	* 5.	<figure> and <figcaption>: Used for self-contained content, like images with captions.
+	* 6.	<table>: A table is used to present structured data, in this case, different service packages.
+	* 7.	<ul> and <li>: An unordered list used to display a list of services.
+	* 8.	<footer>: Contains footer information like copyright notices and additional links.
+	* 9.	Links (<a>): Used throughout the document for navigation and external linking. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Charset Declaration: Defines the character encoding for the document -->
     <meta charset="UTF-8" />
-
-    <!-- Page Title: The title of the document, displayed on the browser tab -->
-    <title>Understanding the Head Tag in HTML</title>
-
-    <!-- Meta Description: A brief description of the page, often used by search engines -->
-    <meta
-      name="description"
-      content="An in-depth guide to understanding the use of the head tag in HTML documents." />
-
-    <!-- Meta Keywords: A list of keywords relevant to the content (less used in modern SEO) -->
-    <meta
-      name="keywords"
-      content="HTML, head tag, meta tags, web development, tutorial" />
-
-    <!-- Meta Viewport: Controls the layout on mobile browsers -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    <!-- Author Meta: Indicates the author of the document -->
-    <meta
-      name="author"
-      content="John Doe" />
-
-    <!-- Favicon: The small icon displayed on the browser tab -->
-    <link
-      rel="icon"
-      href="favicon.ico"
-      type="image/x-icon" />
-
-    <!-- External CSS: Link to an external stylesheet for styling the page -->
-    <link
-      rel="stylesheet"
-      href="styles.css" />
-
-    <!-- External Fonts: Link to an external font from Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
 
-    <!-- Preconnect: Hint for the browser to establish early connections to external resources -->
     <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com" />
+      rel="stylesheet"
+      href="style.css" />
 
-    <!-- DNS Prefetch: Hint for the browser to resolve domain names before resources are requested -->
-    <link
-      rel="dns-prefetch"
-      href="//fonts.googleapis.com" />
-
-    <!-- Open Graph Meta Tags: Used to enhance link previews on social media platforms -->
-    <meta
-      property="og:title"
-      content="Understanding the Head Tag in HTML" />
-    <meta
-      property="og:description"
-      content="An in-depth guide to understanding the use of the head tag in HTML documents." />
-    <meta
-      property="og:image"
-      content="https://example.com/image.png" />
-    <meta
-      property="og:url"
-      content="https://example.com/head-tag-guide" />
-
-    <!-- Twitter Card Meta Tags: Optimizes the display of your content on Twitter -->
-    <meta
-      name="twitter:card"
-      content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Understanding the Head Tag in HTML" />
-    <meta
-      name="twitter:description"
-      content="An in-depth guide to understanding the use of the head tag in HTML documents." />
-    <meta
-      name="twitter:image"
-      content="https://example.com/image.png" />
+    <title>Semantic HTML Example</title>
   </head>
 
   <body>
-    <h1>Welcome to the Head Tag Tutorial</h1>
-    <p>This document showcases the various uses of the <code>&lt;head&gt;</code> tag in HTML.</p>
+    <header>
+      <h1>Welcome to My Website</h1>
+      <p>Your go-to resource for web development tutorials</p>
+    </header>
 
-    <script src="/script.js"></script>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          We are a team of passionate developers dedicated to providing the best tutorials and
+          resources for learning web development.
+        </p>
+      </section>
+
+      <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Web Development</li>
+          <li>Design and UX</li>
+          <li>SEO Optimization</li>
+          <li>Content Creation</li>
+        </ul>
+        <p>We also offer the following packages:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Features</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Basic</td>
+              <td>Basic Website Design</td>
+              <td>$299</td>
+            </tr>
+            <tr>
+              <td>Standard</td>
+              <td>Website Design + SEO</td>
+              <td>$499</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>All-Inclusive Package</td>
+              <td>$799</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <figure>
+          <img
+            src="https://via.placeholder.com/800x400"
+            alt="Sample Image 1" />
+          <figcaption>Our latest web design project</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://via.placeholder.com/800x400"
+            alt="Sample Image 2" />
+          <figcaption>Responsive design on multiple devices</figcaption>
+        </figure>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to work with us, feel free to reach out via email
+          or social media.
+        </p>
+        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>
+          Follow us on:
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            >Twitter</a
+          >,
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            >Facebook</a
+          >,
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            >Instagram</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
   </body>
 </html>
