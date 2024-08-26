@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<!-- * Defines the document type and version of HTML -->
-
 <html lang="en">
-  <!-- * The root element of the HTML document. The 'lang' attribute sets the language of the content -->
-
   <head>
-    <!-- * Contains metadata and links to resources like stylesheets or scripts -->
-
+    <!-- Charset Declaration: Defines the character encoding for the document -->
     <meta charset="UTF-8" />
-    <!-- * Sets the character encoding for the document, ensuring it displays correctly -->
 
+    <!-- Page Title: The title of the document, displayed on the browser tab -->
+    <title>Understanding the Head Tag in HTML</title>
+
+    <!-- Meta Description: A brief description of the page, often used by search engines -->
+    <meta
+      name="description"
+      content="An in-depth guide to understanding the use of the head tag in HTML documents." />
+
+    <!-- Meta Keywords: A list of keywords relevant to the content (less used in modern SEO) -->
+    <meta
+      name="keywords"
+      content="HTML, head tag, meta tags, web development, tutorial" />
+
+    <!-- Meta Viewport: Controls the layout on mobile browsers -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <!-- * Ensures the page is responsive by controlling its width and scaling on different devices -->
 
-    <!-- * Links stylesheets to the document  -->
+    <!-- Author Meta: Indicates the author of the document -->
+    <meta
+      name="author"
+      content="John Doe" />
+
+    <!-- Favicon: The small icon displayed on the browser tab -->
+    <link
+      rel="icon"
+      href="favicon.ico"
+      type="image/x-icon" />
+
+    <!-- External CSS: Link to an external stylesheet for styling the page -->
     <link
       rel="stylesheet"
-      href="./styles.css" />
+      href="styles.css" />
 
-    <title>Hello There</title>
-    <!-- * Sets the title of the webpage, which appears in the browser tab -->
+    <!-- External Fonts: Link to an external font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Preconnect: Hint for the browser to establish early connections to external resources -->
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com" />
+
+    <!-- DNS Prefetch: Hint for the browser to resolve domain names before resources are requested -->
+    <link
+      rel="dns-prefetch"
+      href="//fonts.googleapis.com" />
+
+    <!-- Open Graph Meta Tags: Used to enhance link previews on social media platforms -->
+    <meta
+      property="og:title"
+      content="Understanding the Head Tag in HTML" />
+    <meta
+      property="og:description"
+      content="An in-depth guide to understanding the use of the head tag in HTML documents." />
+    <meta
+      property="og:image"
+      content="https://example.com/image.png" />
+    <meta
+      property="og:url"
+      content="https://example.com/head-tag-guide" />
+
+    <!-- Twitter Card Meta Tags: Optimizes the display of your content on Twitter -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Understanding the Head Tag in HTML" />
+    <meta
+      name="twitter:description"
+      content="An in-depth guide to understanding the use of the head tag in HTML documents." />
+    <meta
+      name="twitter:image"
+      content="https://example.com/image.png" />
   </head>
 
   <body>
-    <!-- * Contains the main content of the HTML document that users will see in the browser -->
+    <h1>Welcome to the Head Tag Tutorial</h1>
+    <p>This document showcases the various uses of the <code>&lt;head&gt;</code> tag in HTML.</p>
 
-    <h1>Hello There</h1>
-    <!-- * A top-level heading element, typically used for the main title or header -->
-
-    <p>This is a simple HTML file. It doesn't do much, but it's a start.</p>
-    <!-- * Defines a paragraph of text -->
-
-    <script src="./script.js"></script>
-    <!-- * Links to an external JavaScript file for adding interactivity to the page -->
+    <script src="/script.js"></script>
   </body>
 </html>
-<!-- * The closing tag for the root element of the HTML document -->
