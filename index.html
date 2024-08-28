@@ -5,14 +5,18 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>CSS Variables Example</title>
+    <title>CSS Variables Inheritance</title>
     <link
       rel="stylesheet"
       href="styles.css" />
   </head>
-  <body class="light-theme">
-    <h1>Welcome to My Themed Page</h1>
-    <button>Toggle Theme</button>
-    <script src="./script.js"></script>
+  <body>
+    <div class="container">
+      <h1>Main Heading</h1>
+      <p>This paragraph inherits the text color from the container.</p>
+      <div class="child">
+        <p>This paragraph also inherits the text color from the container.</p>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,20 +1,14 @@
 :root {
-  --primary-color: #3498db;
-  --background-color: #ffffff;
-  --text-color: #333333;
+  --main-color: #3498db;
+  --text-color: #333;
 }
 
-.dark-theme {
-  --primary-color: #2ecc71;
-  --background-color: #333333;
-  --text-color: #ffffff;
-}
-
-body {
-  background-color: var(--background-color);
+.container {
+  --text-color: #e74c3c; /* Local override */
   color: var(--text-color);
 }
 
-h1 {
-  color: var(--primary-color);
+.child {
+  padding: 10px;
+  background-color: #f0f0f0;
 }
