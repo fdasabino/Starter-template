@@ -17,7 +17,7 @@
     "footer footer footer";
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto 1fr 1fr auto;
-  height: 100vh;
+  min-height: 100vh;
   gap: 10px;
   box-sizing: border-box;
 }
@@ -33,6 +33,7 @@
   justify-content: space-between;
 }
 
+/* Main content styles */
 .main-content {
   grid-area: main;
   display: grid;
@@ -42,6 +43,7 @@
   padding: 20px;
 }
 
+/* Sidebar styles */
 .sidebar {
   background-color: #f1f3f4;
   padding: 20px;
@@ -71,6 +73,8 @@
 .show {
   transform: translateX(0);
 }
+
+/* Footer style */
 
 footer {
   grid-area: footer;
