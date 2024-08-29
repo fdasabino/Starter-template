@@ -5,27 +5,50 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+    <title>Advanced CSS Grid Layout</title>
     <link
       rel="stylesheet"
-      href="./styles.css" />
-    <title>My first CSS Project</title>
+      href="styles.css" />
   </head>
   <body>
-    <main>
-      <header>Flex box</header>
-      <div class="flex_container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-      </div>
-      <div class="flex_container_2">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-      </div>
-      <footer>
-        <p>Footer</p>
+    <div class="grid-container">
+      <header class="header">
+        <h1>Dashboard</h1>
+      </header>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+      <main class="main-content">
+        <section class="content-box">
+          <h2>Overview</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+            libero. Sed cursus ante dapibus diam.
+          </p>
+        </section>
+        <section class="content-box">
+          <h2>Details</h2>
+          <p>
+            Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien.
+            Proin quam. Etiam ultrices.
+          </p>
+        </section>
+        <section class="content-box">
+          <h2>Reports</h2>
+          <p>
+            Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos.
+          </p>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>&copy; 2024 Dashboard Inc.</p>
       </footer>
-    </main>
+    </div>
   </body>
 </html>

@@ -1,79 +1,89 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul {
   margin: 0;
-}
-
-body {
+  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+}
+
+/* Grid container settings */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style each section of the grid */
+.header {
+  grid-area: header;
+  background-color: #1a73e8;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f1f3f4;
+  padding: 20px;
+}
+
+.main-content {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Additional styling */
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
   color: #333;
+  font-weight: bold;
 }
 
-main {
-  display: flex;
-  height: fit-content;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-header {
-  width: 100%;
-  height: 60px;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex_container {
-  width: 500px;
-  height: 500px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
-  border: 1px solid #333;
-  background: orange;
+.content-box {
+  background-color: #e3f2fd;
   padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* .item:nth-child(1) {
-  order: 1;
-} */
-
-.flex_container_2 {
-  width: 500px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
-  border: 1px solid #333;
-  background: red;
-  padding: 20px;
+.content-box h2 {
+  margin-bottom: 10px;
 }
 
-.item {
-  width: 100%;
-  height: 100px;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer {
-  width: 100%;
-  height: 60px;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.content-box p {
+  font-size: 14px;
+  color: #555;
 }
