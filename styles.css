@@ -26,7 +26,7 @@
   background-color: #f1f3f4;
   border: 1px solid #999;
   border-radius: 16px;
-
+  animation: roll_in 3s ease-in 0.1s 1 normal none;
   padding: 20px;
 }
 
@@ -122,6 +122,7 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   width: fit-content;
+  animation: wobble 3s ease-in 0.1s 1 alternate backwards;
 }
 
 button:after {
@@ -162,5 +163,92 @@ button:active {
 @media (max-width: 768px) {
   .main-content {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Keyframes */
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateY(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateY(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateY(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateY(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateY(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes roll_in {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px) rotate(-200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
   }
 }
